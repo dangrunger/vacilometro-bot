@@ -7,7 +7,6 @@ const client = new Discord.client({
     intents : [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES],
 });
 
-// Isso faz a conexão com a env
 
 client.login(process.env.TOKEN);
 
@@ -15,3 +14,16 @@ client.on("ready", () =>{
     console.log("Bot is ready!!!")
 });
 
+
+client.on("messageCreate", (msg) => {
+    if (msg.content == "Hello"){
+        msg.reply({
+            content: "Funfando, ta?"
+        });
+    }
+    if (msg.content == "Fumegando?") {
+        msg.reply({
+            content: "tamo ai paizao"
+        });
+    }
+});
