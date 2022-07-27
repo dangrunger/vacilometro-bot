@@ -7,6 +7,8 @@ const client = new Discord.client({
     intents : [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES],
 });
 
+// Isso faz a conexão com a env
+
 client.login(process.env.TOKEN);
 
 client.on("ready", () =>{
